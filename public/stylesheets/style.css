@@ -1,0 +1,37 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #ccc;
+}
+
+a {
+  color: #00B7FF;
+}
+label{
+
+color:#000;
+}
+.custombanner{
+background: rgba(255, 255, 255, 0.8);
+
+}
+.customtabs{
+border:0;
+}
+.customhead{
+background:url(../images/bg_img.jpg) !important;
+margin:10px;
+padding:20px;
+}
+.custompadding{
+padding:20px;
+}
+#hotelsearch{
+display:none;
+}
+#carsearch{
+display:none;
+}
+#flightsearch{
+display:none;
+}
