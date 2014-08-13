@@ -1,0 +1,197 @@
+<% include header.ejs %>
+	<div class="col-md-12">
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+		<img src="images/pic (1).jpg" alt="">
+		<div class="carousel-caption">
+			<h3>First Slide</h3>
+			<p>sdfsdafsd</p>
+		</div>
+    </div>
+	<div class="item">
+		<img src="images/pic (2).jpg" alt="...">
+		<div class="carousel-caption">
+			<h3>Second Slide</h3>
+			<p>asdfsadfsdaf</p>
+		</div>
+	</div>
+	<div class="item">
+		<img src="images/pic (3).jpg" alt="...">
+		<div class="carousel-caption">
+			<h3>Third Slide</h3>
+			<p>dsfasdfsdf</p>
+		</div>
+	</div>
+</div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div>
+	</div>
+
+	<div class="col-lg-14">
+	<div class="container">
+	<div class="col-md-9">
+	<div class="col-md-3" style="background:#fff;margin:30px;">
+		<h4>Raja Garden</h4>
+		<p>Kottivakkam, Chennai -600041</p>
+		<hr/>
+		<div style="float:right">
+		<span><img src="images/icon-bath.png"><img src="images/icon-bed.png"></span>
+		</div>
+	</div>
+	<div class="col-md-3" style="background:#fff;margin:30px;">
+	<h4>Raja Garden</h4>
+		<p>Kottivakkam, Chennai -600041</p>
+		<hr/>
+		<div style="float:right">
+		<span><img src="images/icon-bath.png"><img src="images/icon-bed.png"></span>
+		</div>
+	</div>
+	<div class="col-md-3" style="background:#fff;margin:30px;">
+	<h4>Raja Garden</h4>
+		<p>Kottivakkam, Chennai -600041</p>
+		<hr/>
+		<div style="float:right">
+		<span><img src="images/icon-bath.png"><img src="images/icon-bed.png"></span>
+		</div>
+	</div>
+	<div class="col-md-3" style="background:#fff;margin:30px;">
+		<h4>Raja Garden</h4>
+		<p>Kottivakkam, Chennai -600041</p>
+		<hr/>
+		<div style="float:right">
+		<span><img src="images/icon-bath.png"><img src="images/icon-bed.png"></span>
+		</div>
+	</div>
+	<div class="col-md-3" style="background:#fff;margin:30px;">
+	<h4>Raja Garden</h4>
+		<p>Kottivakkam, Chennai -600041</p>
+		<hr/>
+		<div style="float:right">
+		<span><img src="images/icon-bath.png"><img src="images/icon-bed.png"></span>
+		</div>
+	</div>
+	<div class="col-md-3" style="background:#fff;margin:30px;">
+	<h4>Raja Garden</h4>
+		<p>Kottivakkam, Chennai -600041</p>
+		<hr/>
+		<div style="float:right">
+		<span><img src="images/icon-bath.png"><img src="images/icon-bed.png"></span>
+		</div>
+	</div>
+	</div>
+	
+	<div class="col-md-3" style="background:#5cbe6d;margin-top: 30px;margin-bottom:30px;">
+		
+		<h3>Find Your Home</h3>
+					<form method="post" action="/homesearch">
+                    <div class="form-group"> <span class="label">Location</span>
+                      <select name="location" class="form-control">
+					<?php
+						
+						$sql = "SELECT * FROM location";
+						$result = mysql_query($sql,$con);
+						while($row = mysql_fetch_array($result)){
+					?>
+                        <option><?php echo $row['Areas']; ?></option>
+                      
+					  <?php } ?></select>
+                    </div>
+                    <div class="form-group"> <span class="label">Type</span>
+                      <select name="hometype" class="form-control">
+                        
+                        <option />House
+                        <option />Apartment
+                        <option />Others
+                      </select>
+                    </div>
+					<div class="row">
+  <div class="col-xs-5">
+                    <div class="form-group half"> <span class="label">Beds</span>
+                      <select name="select" class="form-control">
+                        <option />Any
+                        <option />1
+                        <option />2
+                        <option />3
+                        <option />4
+                        <option />5
+                        <option />5+
+                      </select>
+                    </div>
+					</div>
+					  <div class="col-xs-5">
+                    <div class="form-group half last"> <span class="label">Baths</span>
+                      <select name="select" class="form-control">
+                        <option />Any
+                        <option />1
+                        <option />2
+                        <option />3
+                        <option />4
+                        <option />5
+                        <option />5+
+                      </select>
+                    </div>
+					</div>
+					</div>
+						<div class="row">
+  <div class="col-xs-5">
+                    <div class="form-group half"> <span class="label">Price From</span>
+                      <select name="select" class="form-control">
+                        <option />Any
+                        <option />50,000
+                        <option />100,000
+                        <option />150,000
+                        <option />200,000
+                        <option />250,000
+                        <option />300,000
+                        <option />350,000
+                        <option />400,000
+                        <option />450,000
+                        <option />500,000+
+                      </select>
+                    </div>
+					</div>
+						
+  <div class="col-xs-5">
+                    <div class="form-group half last"> <span class="label">Price To</span>
+                      <select name="select" class="form-control">
+                        <option />Any
+                        <option />50,000
+                        <option />100,000
+                        <option />150,000
+                        <option />200,000
+                        <option />250,000
+                        <option />300,000
+                        <option />350,000
+                        <option />400,000
+                        <option />450,000
+                        <option />500,000+
+                      </select>
+                    </div>
+					</div>
+					</div>
+                    <input type="submit" value="Search Now" class="btn btn-info" />
+					</form>
+	</div>
+	
+	</div>
+	</div>
+	
+	
+	<% include footer.ejs %>

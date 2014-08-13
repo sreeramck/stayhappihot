@@ -7,14 +7,45 @@ var mysql =  require('mysql');
   	password: ""
   });
     connection.connect();
-
+connection.query("use stayhappy");
 
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
+router.get('/hotelindex', function(req, res) {
+  res.render('hotelindex');
+});
+router.get('/homeindex', function(req, res) {
+  res.render('homeindex');
+});
+router.get('/gallery', function(req, res) {
+  res.render('gallery');
+});
+router.get('/contact', function(req, res) {
+  res.render('contact');
+});
+router.post('/siteredirect', function(req, res){
+ var strQuery = "select adminemail from adminlogin where adminemail = '"+req.body.adminemail+"' and adminpassword = '"+req.body.adminpassword+"'";	
+  
+  connection.query( strQuery, function(err, rows){
+  	if(err)	{
+  		throw err;
+  	}else{
+	for (var i =0; i < rows.length; i++)
+		var result = rows[i].adminemail;
+  	}
+	if(result){
+	res.render('indexhome');
+	}
+	else{
+	res.render('index');
+	}
+	});
+  });
+
 router.post('/signin', function(req, res) {
-connection.query("use stayhappy");
+
 var post  = {name: req.body.name, username: req.body.uname, userpassword: req.body.pwd, useremailid: req.body.email, usermobileno: req.body.mno, useraddress: req.body.addr};
 var query = connection.query('INSERT INTO register SET ?', post);
   res.render('index');

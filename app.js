@@ -13,7 +13,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -25,7 +24,12 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/hotelsearch', routes);
 app.post('/hotelsearch', routes);
-
+app.use('/hotelindex', routes);
+app.use('/homeindex', routes);
+app.use('/gallery', routes);
+app.use('/contact', routes);
+app.use('/siteredirect', routes);
+app.post('/siteredirect', routes);
 app.post('/signin', routes);
 
 /// catch 404 and forward to error handler

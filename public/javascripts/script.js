@@ -1,3 +1,4 @@
+
   var map, places, iw, shadow;
   var markers = [];
   var autocomplete;

@@ -35,3 +35,66 @@ display:none;
 #flightsearch{
 display:none;
 }
+/*- - - - - - - - - - - - - - - - - - - - 
+/* BLOG LIST
+/*- - - - - - - - - - - - - - - - - - - - */
+.bloglist-small {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .bloglist-small li {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+        .bloglist-small li h5 {
+            margin-bottom: 5px;
+        }
+
+        .bloglist-small li .txt {
+            padding-left: 80px;
+        }
+
+        .bloglist-small li .read {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .bloglist-small li .info {
+            display: block;
+            margin: 0;
+            font-size: 11px;
+            color: #aaa;
+        }
+
+    .bloglist-small img {
+        position: absolute;
+    }
+
+.date-box {
+    width: 60px;
+    position: absolute;
+    text-align: center;
+	border:solid 1px #ddd;
+}
+
+    .date-box .day {
+        display: block;
+        font-size: 24px;
+        padding: 12px 0 12px 0;
+    }
+
+    .date-box .month {
+		font-size:12px;
+        display: block;
+		color:#fff;
+        background:#5CBE6D;
+    }
+/*- - - - - - - - - - - - - - - - - - - - 
+	flickr
+- - - - - - - - - - - - - - - - - - - - */
+#flickr-photo-stream img{ width:50px; height:auto; margin:0 12px 12px 0; float:left;}
+#flickr-photo-stream a img {border:solid 2px #fff;}
+#flickr-photo-stream a:hover img {border:solid 2px #96C277;}
